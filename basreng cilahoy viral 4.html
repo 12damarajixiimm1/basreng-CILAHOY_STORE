@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset="utf-8">
+     <title>Web Penilaian DMI damar aji</title>
+	 <style>
+	 body {
+      font-family: "Avenir Next";
+}
+
+li {
+	  list-style: none;
+}
+
+.kop {
+	  background-color: black;
+	  color: #fff;
+	  height: 50px;
+}
+	   
+.header {
+	  background-color: black;
+	  color: #fff;
+	  height: 90px;
+}
+
+.header li:hover {
+	  background-color: white; 
+	  font-size:25px;
+	  color: black;
+}
+
+.header-logo img{
+	  float: left;
+	  width: 80px;
+	  height: 80px;
+	  margin-top: 5px;
+	  margin-left: 20px;
+}
+.header-logo2 img{
+	  float: right;
+	  width: 80px;
+	  height: 80px;
+	  margin-top: 5px;
+	  margin-left: 20px;
+	  margin-right: 17px;
+}
+
+.header-list {
+	 margin-left: 50px;
+	 padding-left: 330px;
+}
+
+.header-list li {
+	  float: left;
+	  padding: 33px 20px;  
+      border: 0px solid blue;
+      padding : 20px 40px;
+      margin-left: 20px ;
+      margin-top: 15px;
+      background-color: white;
+}
+	 .contact-form {
+	height: 670px;
+	  
+	  color: white;
+	  border: 5px solid white;
+	 
+	 
+	  background-color: black;
+	  font : Serif ;
+}
+.contact-form button  {
+	width: 100% ;
+	height: 40px ;
+	padding: 10 px ;
+}
+.contact-form table {
+	width : 60% ;
+}
+</style>
+	 
+	 
+	 </head>
+	 <body>
+     <div class="kop">
+	 <marquee direction="right" height="100px">
+		<p>SELAMAT DATANG DI CILAHOY STORE HALAL ENAK HARGA TERJANGKAU </p>
+     </marquee>
+	
+	 </div>
+     <div class="header">
+	 
+         <div class="header-list">
+			 <ul>
+				   <li><a href="basreng cilahoy viral.html"> beranda </a></li> 
+				  <li><a href="basreng cilahoy viral 3.html"> profil</a></li> 
+				  <li> <a href="basreng cilahoy viral 2 .html"> produk </a></li>
+				    <li><a href="basreng cilahoy viral 4.html"> pesanan</a></li> 
+				 
+			 </ul>
+         </div>
+     </div>
+	 <div class="contents33">	 
+		<h1>SILAHKAN KETIK NAMA DAN NOMINAL BELANJAAN</h1> 
+</div>
+
+<div class="contact-form">
+<center>
+						<table border="0">
+							<tr>
+								<th colspan="2" bgcolor="red">PERHITUNGAN BELANJA</th>
+							</tr>
+							<tr>
+								<th colspan="2" bgcolor="BLACK">CILAHOY_STORE</th>
+							</tr>
+							<tr>
+								<td align="center">NAMA BARANG</td>
+								<td align="center"><input type="text" id="ipt_namabarang"></td>
+							</tr>
+							<tr>
+								<td align="center">HARGA BARANG</td>
+								<td align="center"><input type="text" id="ipt_hargabarang"></td>
+							</tr>
+							<tr>
+								<td align="center">JUMLAH BARANG</td>
+								<td align="center"><input type="text" id="ipt_jumlahbarang"></td>
+							</tr>
+							<tr>
+								<td align="center">DISKON</td>
+								<td align="center"><input type="text" id="ipt_diskon"></td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2"><button onclick="hitung()"=>HITUNG</button> </td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2">
+									<p>AYO BELANJA</p>
+									<p>CILAHOY_STORE</p>
+								</td>
+							</tr>
+							<tr>
+								<td align="center">NAMA BARANG</td>
+								<td align="center"><input type="text" id="opt_namabarang" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">HARGA BARANG</td>
+								<td align="center"><input type="text" id="opt_hargabarang" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">JUMLAH BARANG</td>
+								<td align="center"><input type="text" id="opt_jumlahbarang" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">DISKON</td>
+								<td align="center"><input type="text" id="opt_diskon" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">TOTAL HARGA</td>
+								<td align="center"><input type="text" id="opt_totalharga" disabled></td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2"><button onclick="reset()"=>RESET</button></td>
+							</tr>
+						</table>
+						<script>
+							var namabarang;
+							var hargabarang;
+							var jumlahbarang;
+							var diskon;
+							var totalharga;
+							function hitung() {
+								namabarang = document.getElementById("ipt_namabarang").value;
+								hargabarang = parseFloat(document.getElementById("ipt_hargabarang").value);
+								jumlahbarang = parseFloat(document.getElementById("ipt_jumlahbarang").value);
+								diskon = parseFloat(document.getElementById("ipt_diskon").value);
+								totalharga = (hargabarang * jumlahbarang) - (hargabarang * jumlahbarang * diskon/100);
+								document.getElementById("opt_namabarang").value = namabarang;
+								document.getElementById("opt_hargabarang").value = hargabarang;
+								document.getElementById("opt_jumlahbarang").value = jumlahbarang;
+								document.getElementById("opt_diskon").value = diskon;
+								document.getElementById("opt_totalharga").value = totalharga;
+							}
+							function reset(){
+								document.getElementById("ipt_namabarang").value = "";
+								document.getElementById("ipt_hargabarang").value = "";
+								document.getElementById("ipt_jumlahbarang").value = "";
+								document.getElementById("ipt_diskon").value ="";
+								document.getElementById("opt_namabarang").value = "";
+								document.getElementById("opt_hargabarang").value = "";
+								document.getElementById("opt_jumlahbarang").value = "";
+								document.getElementById("opt_diskon").value ="";
+								document.getElementById("opt_totalharga").value = "";
+                            }
+						</script>
+</center>
+					</div>
+	</body>	
+</html>	
